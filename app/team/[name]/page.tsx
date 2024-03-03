@@ -3,13 +3,13 @@ import React from 'react'
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 import Image from 'next/image'
 
-interface Props {
-  name: string
+interface TeamMemberProps {
+  params: {
+    name: string
+  }
 }
 
-const TeamMeberPage: React.FC<Props & { params: { name: string } }> = ({
-  params,
-}) => {
+export default function TeamMemberPage({ params }: TeamMemberProps) {
   const name = params.name
   return (
     <div className='h-full w-full'>
@@ -113,5 +113,3 @@ const items = recaps.map((recap) => ({
     />
   ),
 }))
-
-export default TeamMeberPage

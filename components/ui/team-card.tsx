@@ -7,7 +7,7 @@ type TeamCardProps = {
 }
 
 function TeamCard({ image }: TeamCardProps) {
-  const cardRef = useRef(null)
+  const cardRef = useRef<HTMLDivElement>(null)
   const [transform, setTransform] = useState('')
   const [backgroundImage, setBackgroundImage] = useState('')
   const [transitionDuration, setTransitionDuration] = useState('300ms')
@@ -16,7 +16,10 @@ function TeamCard({ image }: TeamCardProps) {
   let imageSrc = `/img/team/avatar/${image}.jpg`
 
   useEffect(() => {
-    const card = cardRef.current
+    const card: HTMLDivElement | null = cardRef?.current
+
+    if (!card) return
+
     const bounds = card.getBoundingClientRect()
 
     function rotateToMouse(e: { offsetX: any; offsetY: any }) {
