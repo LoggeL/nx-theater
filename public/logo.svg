@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 592.13 578.52">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #f97316;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        stroke-width: 11px;
+      }
+
+      .cls-5 {
+        fill: #f97316;
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: rgba(255, 255, 255, 0);
+      }
+
+      .cls-4 {
+        stroke-width: 13px;
+      }
+    </style>s="cls-3" d="M444,10.02s55,60,136,42c0,0,27,57-28,122s-83,40-83,40c0,0-78-79-25-204Z"/>
+  <path class="cls-4" d="M447.5,80.52s24-15,35,6c0,0-24,18-35-6Z"/>
+  <path class="cls-4" d="M528,107.02s12-16,32,2c0,0-14,18-32-2Z"/>
+  <path class="cls-4" d="M465,62.02s46,3,31,38,8,38,8,38c0,0-16-11,0-32s-6-54-39-44Z"/>
+  <path class="cls-1" d="M527,89.02s24-11,37,7c0,0-7-32-37-7Z"/>
+  <path class="cls-4" d="M461,136.02s34,51,77,11c0,0-53,75-77-11Z"/>
+  <path class="cls-2" d="M8,424.02s95-13,139-125c0,0,92,74,95,184s-64,87-64,87c0,0-137-9-170-146Z"/>
+  <path class="cls-4" d="M54.5,466.52s10-30,41-28c0,0-41.5-17.5-41,28Z"/>
+  <path class="cls-4" d="M152,371.02s-55,33-12,66,7,46,7,46c0,0,14-17-13-37s-18-49-18-49c0,0,11-24,36-26Z"/>
+  <path class="cls-4" d="M64,479.02s21-32,42-19c0,0-10,32-42,19Z"/>
+  <path class="cls-4" d="M147,411.02s-13-22,36-29c0,0,12,30-36,29Z"/>
+  <path class="cls-4" d="M112,513.02s74,23,87-56c0,0,24,110-87,56Z"/>
+  <polygon class="cls-4" points="216.5 34.52 238.5 229.52 448.5 42.52 216.5 34.52"/>
+</svg>
