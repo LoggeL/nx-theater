@@ -7,7 +7,9 @@ interface Props {
   name: string
 }
 
-const TeamMeberPage: React.FC<Props> = ({ params }) => {
+const TeamMeberPage: React.FC<Props & { params: { name: string } }> = ({
+  params,
+}) => {
   const name = params.name
   return (
     <div className='h-full w-full'>
@@ -98,52 +100,15 @@ const recaps = [
   },
 ]
 
-// const items = [
-//   {
-//     title: 'The Dawn of Innovation',
-//     description: 'Explore the birth of groundbreaking ideas and inventions.',
-//     header: <Skeleton />,
-//   },
-//   {
-//     title: 'The Digital Revolution',
-//     description: 'Dive into the transformative power of technology.',
-//     header: <Skeleton />,
-//   },
-//   {
-//     title: 'The Art of Design',
-//     description: 'Discover the beauty of thoughtful and functional design.',
-//     header: <Skeleton />,
-//   },
-//   {
-//     title: 'The Power of Communication',
-//     description:
-//       'Understand the impact of effective communication in our lives.',
-//     header: <Skeleton />,
-//   },
-//   {
-//     title: 'The Pursuit of Knowledge',
-//     description: 'Join the quest for understanding and enlightenment.',
-//     header: <Skeleton />,
-//   },
-//   {
-//     title: 'The Joy of Creation',
-//     description: 'Experience the thrill of bringing ideas to life.',
-//     header: <Skeleton />,
-//   },
-//   {
-//     title: 'The Spirit of Adventure',
-//     description: 'Embark on exciting journeys and thrilling discoveries.',
-//     header: <Skeleton />,
-//   },
-// ]
-
 const items = recaps.map((recap) => ({
   title: recap.title,
   description: recap.description,
   header: (
-    <img
+    <Image
       src={recap.img}
       alt={recap.title}
+      width={1000}
+      height={1000}
       className='w-full h-60 object-cover rounded-t-lg'
     />
   ),
