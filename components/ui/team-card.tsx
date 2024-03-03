@@ -12,7 +12,8 @@ function TeamCard({ image }: TeamCardProps) {
   const [backgroundImage, setBackgroundImage] = useState('')
   const [transitionDuration, setTransitionDuration] = useState('300ms')
   const [boxShadow, setBoxShadow] = useState('0 1px 5px #00000099')
-  const [imageSrc, setImageSrc] = useState(`/img/team/avatar/${image}.jpg`)
+  // const [imageSrc, setImageSrc] = useState(null)
+  let imageSrc = `/img/team/avatar/${image}.jpg`
 
   useEffect(() => {
     const card = cardRef.current
@@ -84,6 +85,7 @@ function TeamCard({ image }: TeamCardProps) {
         // Navigate to the team member page
         () => {
           console.log('Navigate to the team member page')
+          window.location.href = '/team/' + image
         }
       }
     >
@@ -93,10 +95,12 @@ function TeamCard({ image }: TeamCardProps) {
         className='rounded-lg object-cover'
         sizes='100% 100%'
         fill
-        onError={(e) => {
-          console.log('Error loading image', e)
-          setImageSrc('/img/team/avatar/Placeholder.svg')
-        }}
+        // onError={(e) => {
+        //   // If error loading image, set the default image
+        //   e.currentTarget.onerror = null // Prevent infinite loop
+        //   console.log('Error loading image', e)
+        //   imageSrc = '/img/team/avatar/Placeholder.svg'
+        // }}
       />
       <div className='absolute flex bg-black bg-opacity-50 text-white m-2 p-2 rounded-lg justify-end items-top right-0'>
         {image}
