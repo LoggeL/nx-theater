@@ -2,6 +2,7 @@ import { Spotlight } from '@/components/ui/spotlight'
 import React from 'react'
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 import Image from 'next/image'
+import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 
 interface TeamMemberProps {
   params: {
@@ -28,7 +29,8 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
             height='1000'
             width='1000'
             className='h-52 w-full object-contain rounded-xl mt-28'
-            alt='Kolping Logo'
+            alt={name}
+            priority={true}
           />
         </div>
       </div>
@@ -48,28 +50,27 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
   )
 }
 
-const Skeleton = () => (
-  <div className='flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100'></div>
-)
-
 const recaps = [
   {
     title: 'Bluttribut',
     img: '/img/banners/bluttribut.jpg',
     description: 'Ein spannendes Drama über Vampire und ihre Opfer.',
     link: '/recap/bluttribut',
+    blurHash: 'L59$kG#S~CIo].$jRjs:00Xm9Zxu',
   },
   {
     title: 'Dystopia',
     img: '/img/banners/dystopia.jpg',
     description: 'Eine düstere Zukunftsvision in einer dystopischen Welt.',
     link: '/recap/dystopia',
+    blurHash: 'LGI3pi?E^Nf7HToL%J$$.PNbAGEh',
   },
   {
     title: 'Goldfieber',
     img: '/img/banners/goldfieber.jpg',
     description: 'Eine abenteuerliche Suche nach Gold im Wilden Westen.',
     link: '/recap/goldfieber',
+    blurHash: 'L4EC2X0100Ir~4jZ0mNH4T-o.9E2',
   },
   {
     title: 'Kloster',
@@ -77,6 +78,7 @@ const recaps = [
     description:
       'Ein geheimnisvolles Drama, das in einem abgelegenen Kloster spielt.',
     link: '/recap/kloster',
+    blurHash: 'L7HA@KE100-pQ*~X%ir:?w00xA-;',
   },
   {
     title: 'Kristall',
@@ -84,12 +86,14 @@ const recaps = [
     description:
       'Eine magische Geschichte über die Macht eines mystischen Kristalls.',
     link: '/recap/kristall',
+    blurHash: 'L6Dl$u03XW~X00xVRMjWF*-;ohR*',
   },
   {
     title: 'Maleficarum',
     img: '/img/banners/maleficarum.jpg',
     description: 'Ein düsteres Stück über Hexerei und dunkle Magie.',
     link: '/recap/maleficarum',
+    blurHash: 'L3Kc2a,;03E8{eRUl7S^01ENb@=^',
   },
   {
     title: 'Proben',
@@ -97,19 +101,25 @@ const recaps = [
     description:
       'Ein Einblick in die harte Arbeit und das Engagement hinter den Kulissen.',
     link: '/recap/proben',
+    blurHash: 'LAEo[Ixu~qt700IU4nM{_3j[WBxu',
   },
 ]
 
-const items = recaps.map((recap) => ({
-  title: recap.title,
-  description: recap.description,
-  header: (
-    <Image
-      src={recap.img}
-      alt={recap.title}
-      width={1000}
-      height={1000}
-      className='w-full h-60 object-cover rounded-t-lg'
-    />
-  ),
-}))
+const items = recaps.map((recap) => {
+  return {
+    title: recap.title,
+    description: recap.description,
+    header: (
+      <Image
+        src={recap.img}
+        alt={recap.title}
+        width={1000}
+        height={650}
+        className='h-60 object-cover rounded-t-lg'
+        // loading='lazy'
+        blurDataURL={blurHashToDataURL(recap.blurHash)}
+        placeholder='blur'
+      />
+    ),
+  }
+})

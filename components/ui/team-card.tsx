@@ -98,6 +98,7 @@ function TeamCard({ image }: TeamCardProps) {
         className='rounded-lg object-cover'
         sizes='100% 100%'
         fill
+        priority={true}
         // onError={(e) => {
         //   // If error loading image, set the default image
         //   e.currentTarget.onerror = null // Prevent infinite loop
