@@ -3,17 +3,18 @@ import Link from 'next/link'
 import React, { useRef, useEffect, useState } from 'react'
 
 type TeamCardProps = {
-  image: string
+  actor: any
 }
 
-function TeamCard({ image }: TeamCardProps) {
+function TeamCard({ actor }: TeamCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
   const [transform, setTransform] = useState('')
   const [backgroundImage, setBackgroundImage] = useState('')
   const [transitionDuration, setTransitionDuration] = useState('300ms')
   const [boxShadow, setBoxShadow] = useState('0 1px 5px #00000099')
-  // const [imageSrc, setImageSrc] = useState(null)
-  let imageSrc = `/img/team/avatar/${image}.jpg`
+  let imageSrc = actor.placeholderHero
+    ? `/img/team/avatar/placeholder.svg`
+    : `/img/team/avatar/${actor.name}.jpg`
 
   useEffect(() => {
     const card: HTMLDivElement | null = cardRef?.current
@@ -29,17 +30,6 @@ function TeamCard({ image }: TeamCardProps) {
         x: leftX - bounds.width / 2,
         y: topY - bounds.height / 2,
       }
-      const distance = Math.sqrt(center.x ** 2 + center.y ** 2)
-
-      setTransform(`
-        scale3d(1.07, 1.07, 1.07)
-        rotate3d(
-          ${center.y / 100},
-          ${-center.x / 100},
-          0,
-          ${Math.log(distance) * 4}deg
-        )
-      `)
 
       setBackgroundImage(`
         radial-gradient(
@@ -87,8 +77,7 @@ function TeamCard({ image }: TeamCardProps) {
       onClick={
         // Navigate to the team member page
         () => {
-          console.log('Navigate to the team member page')
-          window.location.href = '/team/' + image
+          window.location.href = '/team/' + actor.name
         }
       }
     >
@@ -99,15 +88,9 @@ function TeamCard({ image }: TeamCardProps) {
         sizes='100% 100%'
         fill
         priority={true}
-        // onError={(e) => {
-        //   // If error loading image, set the default image
-        //   e.currentTarget.onerror = null // Prevent infinite loop
-        //   console.log('Error loading image', e)
-        //   imageSrc = '/img/team/avatar/Placeholder.svg'
-        // }}
       />
       <div className='absolute flex bg-black bg-opacity-50 text-white m-2 p-2 rounded-lg justify-end items-top right-0'>
-        {image}
+        {actor.name}
       </div>
       <div
         className='glow rounded-lg'

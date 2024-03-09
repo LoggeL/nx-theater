@@ -21,20 +21,23 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
           fill='white'
         />
         <div className='p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0'>
-          <h1 className='font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-orange-300 to-orange-600 bg-opacity-50 pb-2'>
+          <h1 className='font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-orange-300 to-orange-600 bg-opacity-50 pb-2 mt-56 mb-10'>
             <div className='text-4xl md:text-6xl'>{name}</div>
           </h1>
           <Image
             src={'/img/team/avatar/' + name + '.jpg'}
-            height='1000'
-            width='1000'
-            className='h-52 w-full object-contain rounded-xl mt-28'
+            height='715'
+            width='1080'
+            className='object-contain rounded-xl mx-auto'
             alt={name}
             priority={true}
+            loading='eager'
+            placeholder='blur'
+            blurDataURL={blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')}
           />
         </div>
       </div>
-      <div className='h-full w-full flex md:items-center md:justify-center bg-black/[0.96] relative'>
+      <div className='h-full w-full flex md:items-center md:justify-center bg-black/[0.96] relative mt-10'>
         <BentoGrid className='max-w-4xl mx-auto '>
           {items.map((item, i) => (
             <BentoGridItem
@@ -53,6 +56,7 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
 const recaps = [
   {
     title: 'Bluttribut',
+    year: 2021,
     img: '/img/banners/bluttribut.jpg',
     description: 'Ein spannendes Drama über Vampire und ihre Opfer.',
     link: '/recap/bluttribut',
@@ -60,6 +64,7 @@ const recaps = [
   },
   {
     title: 'Dystopia',
+    year: 2020,
     img: '/img/banners/dystopia.jpg',
     description: 'Eine düstere Zukunftsvision in einer dystopischen Welt.',
     link: '/recap/dystopia',
@@ -67,6 +72,7 @@ const recaps = [
   },
   {
     title: 'Goldfieber',
+    year: 2016,
     img: '/img/banners/goldfieber.jpg',
     description: 'Eine abenteuerliche Suche nach Gold im Wilden Westen.',
     link: '/recap/goldfieber',
@@ -74,6 +80,7 @@ const recaps = [
   },
   {
     title: 'Kloster',
+    year: 2017,
     img: '/img/banners/kloster.jpg',
     description:
       'Ein geheimnisvolles Drama, das in einem abgelegenen Kloster spielt.',
@@ -82,6 +89,7 @@ const recaps = [
   },
   {
     title: 'Kristall',
+    year: 2018,
     img: '/img/banners/kristall.jpg',
     description:
       'Eine magische Geschichte über die Macht eines mystischen Kristalls.',
@@ -90,6 +98,7 @@ const recaps = [
   },
   {
     title: 'Maleficarum',
+    year: 2019,
     img: '/img/banners/maleficarum.jpg',
     description: 'Ein düsteres Stück über Hexerei und dunkle Magie.',
     link: '/recap/maleficarum',

@@ -346,14 +346,12 @@ const team = {
   ],
 }
 
-const teamMembers = team.current.map((member) => {
-  return member.name
-})
+const actors = team.current
 
 export default function Team() {
   return (
     <div className='h-screen w-screen rounded-md flex flex-col md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden'>
-      <ParallaxScroll images={teamMembers}></ParallaxScroll>
+      <ParallaxScroll actors={actors}></ParallaxScroll>
     </div>
   )
 }

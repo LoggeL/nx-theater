@@ -2,15 +2,14 @@
 import { useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import TeamCard from './team-card'
 
 export const ParallaxScroll = ({
-  images,
+  actors,
   className,
 }: {
-  images: string[]
+  actors: any[]
   className?: string
 }) => {
   const gridRef = useRef<any>(null)
@@ -23,11 +22,11 @@ export const ParallaxScroll = ({
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200])
   const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200])
 
-  const third = Math.ceil(images.length / 3)
+  const third = Math.ceil(actors.length / 3)
 
-  const firstPart = images.slice(0, third)
-  const secondPart = images.slice(third, 2 * third)
-  const thirdPart = images.slice(2 * third)
+  const firstPart = actors.slice(0, third)
+  const secondPart = actors.slice(third, 2 * third)
+  const thirdPart = actors.slice(2 * third)
 
   return (
     <div
@@ -39,12 +38,12 @@ export const ParallaxScroll = ({
         ref={gridRef}
       >
         <div className='grid gap-10'>
-          {firstPart.map((name, idx) => (
+          {firstPart.map((actor, idx) => (
             <motion.div
               style={{ y: translateFirst }} // Apply the translateY motion value here
               key={'grid-1' + idx}
             >
-              <TeamCard image={name} />
+              <TeamCard actor={actor} />
               {/* <Image
                 src={el}
                 className='h-80 w-full object-cover rounded-lg gap-10 !m-0 !p-0'
@@ -56,16 +55,16 @@ export const ParallaxScroll = ({
           ))}
         </div>
         <div className='grid gap-10'>
-          {secondPart.map((name, idx) => (
+          {secondPart.map((actor, idx) => (
             <motion.div style={{ y: translateSecond }} key={'grid-2' + idx}>
-              <TeamCard image={name} />
+              <TeamCard actor={actor} />
             </motion.div>
           ))}
         </div>
         <div className='grid gap-10'>
-          {thirdPart.map((name, idx) => (
+          {thirdPart.map((actor, idx) => (
             <motion.div style={{ y: translateThird }} key={'grid-3' + idx}>
-              <TeamCard image={name} />
+              <TeamCard actor={actor} />
             </motion.div>
           ))}
         </div>
