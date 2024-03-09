@@ -1,0 +1,570 @@
+{
+    "plays": [
+        "2016 “Die Geschichte der Black Swan”",
+        "2017 “Verrat im Kloster”",
+        "2018 “Bluttribut”",
+        "2019 “Dystopia”",
+        "2020 “Der Kristall der Träume”",
+        "2021 “Malleus Maleficarum”",
+        "2022 “Goldfieber”",
+        "2023 “Traum von Freiheit”",
+        "2023 “Sagenhaft” (Kreativbühne)"
+    ],
+    "current": [
+        {
+            "name": "Anton",
+            "roles": [
+                "Sir Richard Black",
+                "Hauptmann Lorentz",
+                "Graf Harras",
+                "Alan",
+                "Kaiser Richard",
+                "Fürstbischof Reinhard",
+                "Morgan Bullock",
+                "Laurent",
+                null
+            ]
+        },
+        {
+            "name": "Carina",
+            "roles": [
+                "Jacky",
+                "Prinzessin Helen",
+                "Lisa",
+                "Cobra",
+                "Kaiserin Theresa",
+                "Helene",
+                "Maggy",
+                "Marry Reed",
+                null
+            ]
+        },
+        {
+            "name": "Elena",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Johanna"
+            ]
+        },
+        {
+            "name": "Fernanda",
+            "placeholderAvatar": true,
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Magd"
+            ]
+        },
+        {
+            "name": "Fynn",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "George",
+                "Admiral Rodrigo",
+                null
+            ]
+        },
+        {
+            "name": "Jonas",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Jesse",
+                "Ensemble",
+                "Berthold von Winzingen"
+            ]
+        },
+        {
+            "name": "Julian",
+            "roles": [
+                "Bühnentechnik",
+                "Ensemble",
+                "Ensemble",
+                "Ensemble",
+                "Hofarzt",
+                "Ensemble",
+                "Jim / John",
+                "Ensemble",
+                "Bühnentechnik"
+            ]
+        },
+        {
+            "name": "Lea",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                "Riccarda",
+                "Maren",
+                "Kate O`Hara",
+                "Anne Bonny",
+                null
+            ]
+        },
+        {
+            "name": "Leon",
+            "roles": [
+                null,
+                "Graf Philipp",
+                "Johann",
+                "Lizard",
+                "Jens",
+                "Georg",
+                "Ben McConnell",
+                "Ensemble",
+                null
+            ]
+        },
+        {
+            "name": "Louis",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                "Arno",
+                "Pater Heinrich",
+                "Frank McConnel",
+                "Edward Teach “Blackbeard”",
+                null
+            ]
+        },
+        {
+            "name": "Lina",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Rose",
+                "Ensemble",
+                "Junge Johanna/ Ensemble"
+            ]
+        },
+        {
+            "name": "Magdalena",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Carmen",
+                null
+            ]
+        },
+        {
+            "name": "Maria",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Ruth",
+                "Lilly",
+                "Isabella Mendoza",
+                null
+            ]
+        },
+        {
+            "name": "Max",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Bill",
+                "Ensemble",
+                "Bühnentechnik"
+            ]
+        },
+        {
+            "name": "Maximilian",
+            "roles": [
+                null,
+                "Ensemble",
+                "Ensemble",
+                "Ensemble",
+                "Ensemble",
+                "Ensemble",
+                "Zeitungsausträger",
+                "Ensemble",
+                null
+            ]
+        },
+        {
+            "name": "Nela",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Junge Marie/ Ensemble"
+            ]
+        },
+        {
+            "name": "Nele",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Annie",
+                "Megan",
+                "Marie"
+            ]
+        },
+        {
+            "name": "Niko",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Will",
+                "Ensemble",
+                "Knappe/ Ensemble"
+            ]
+        },
+        {
+            "name": "Raphael",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Liebhaber/ Ensemble"
+            ]
+        },
+        {
+            "name": "Sebastian",
+            "roles": [
+                "Regie",
+                "Ensemble / Regie",
+                "Albert / Regie",
+                "Ensemble / Regie",
+                "Ensemble / Regie",
+                "Ensemble / Regie",
+                "Doc William Mc Allister / Regie",
+                "Capitan Javier / Regie",
+                "Regie"
+            ]
+        },
+        {
+            "name": "Sophia",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                null
+            ]
+        },
+        {
+            "name": "Theresa",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Emma"
+            ]
+        },
+        {
+            "name": "Tobias",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                "Ensemble",
+                "Ensemble",
+                "Edward Smith",
+                "Ensemble",
+                "Bär/ Ensemble"
+            ]
+        },
+        {
+            "name": "Vanessa",
+            "placeholderAvatar": true,
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Monster"
+            ]
+        },
+        {
+            "name": "Yunus",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Technik",
+                "Thomas",
+                "Jack Rackham",
+                null
+            ]
+        }
+    ],
+    "former": [
+        {
+            "name": "Anna",
+            "roles": [
+                "Susan Campbell",
+                "Anne",
+                "Ida",
+                "Moon",
+                "Emily",
+                "Ensemble"
+            ]
+        },
+        {
+            "name": "Anna R",
+            "roles": [
+                "Alice",
+                "Stumpfwaldhexe",
+                "Hausgeist Anastasia",
+                "Lilly"
+            ]
+        },
+        {
+            "name": "Anika",
+            "roles": [
+                "Ensemble",
+                "Ensemble",
+                "Ensemble"
+            ]
+        },
+        {
+            "name": "Frankie",
+            "roles": [
+                null,
+                null,
+                null,
+                "Vyper"
+            ]
+        },
+        {
+            "name": "Franek",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Richie",
+                "Matteo",
+                null
+            ]
+        },
+        {
+            "name": "Jack",
+            "roles": [
+                null,
+                null,
+                null,
+                "Cover Moon/ Ensemble",
+                "Dr. von Hofmannsthal",
+                "Pater Markus"
+            ]
+        },
+        {
+            "name": "Johannes",
+            "roles": [
+                null,
+                "Ensemble",
+                "Ensemble",
+                "Ensemble",
+                "Ensemble",
+                "Ensemble",
+                "Bestatter",
+                "Ensemble",
+                "Vater/Bote"
+            ]
+        },
+        {
+            "name": "Laura",
+            "roles": [
+                "Lucy",
+                "Ensemble",
+                "Ensemble",
+                "Ensemble"
+            ]
+        },
+        {
+            "name": "Luisa",
+            "roles": [
+                null,
+                null,
+                null,
+                "Cat",
+                "Merle",
+                "Klara",
+                "Jane",
+                "Sofia Mendoza",
+                null
+            ]
+        },
+        {
+            "name": "Leonhard",
+            "roles": [
+                "Gouverneur Campbell",
+                "Kaiser Heinrich",
+                "Wirt Otto",
+                "Richy"
+            ]
+        },
+        {
+            "name": "Marc",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                "Theodor",
+                "Wilhelm"
+            ]
+        },
+        {
+            "name": "Marleen",
+            "roles": [
+                "Kate Campbell",
+                "Prinzessin Elisabeth",
+                "Martha",
+                "Mira"
+            ]
+        },
+        {
+            "name": "Paul",
+            "roles": [
+                null,
+                null,
+                "Ensemble",
+                "Ensemble",
+                "Ensemble"
+            ]
+        },
+        {
+            "name": "Paulina",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                "Ensemble"
+            ]
+        },
+        {
+            "name": "Till",
+            "roles": [
+                null,
+                "Mattes",
+                "Hans",
+                "Python",
+                "Archibald",
+                "Barde Mattes",
+                "Eddie"
+            ]
+        },
+        {
+            "name": "Toni",
+            "roles": [
+                "Captain Anne",
+                "Agnes",
+                "Emma"
+            ]
+        }
+    ],
+    "tech": [
+        {
+            "name": "Christian",
+            "icon": "camera",
+            "job": "Videotechnik"
+        },
+        {
+            "name": "Daniel",
+            "icon": "lightbulb",
+            "job": "Lichttechnik"
+        },
+        {
+            "name": "Florian",
+            "icon": "settings",
+            "job": "Bühnentechnik"
+        },
+        {
+            "name": "Leo",
+            "icon": "settings",
+            "job": "Bühnentechnik"
+        },
+        {
+            "name": "Noah",
+            "icon": "lightbulb",
+            "job": "Lichttechnik (Strobo)"
+        },
+        {
+            "name": "Wolfgang",
+            "icon": "headphones",
+            "job": "Tontechnik"
+        }
+    ]
+}
