@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 
 export default function HeroScrollDemo() {
   return (
-    <div className='flex flex-col pt-20 h-full'>
+    <div className='flex flex-col pt-20 h-full w-9/12'>
       <ContainerScroll
         image={
           <Image

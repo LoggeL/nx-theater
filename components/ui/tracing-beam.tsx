@@ -9,6 +9,22 @@ import {
 } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
+function getWindowDimensions() {
+  if (typeof window !== 'undefined') {
+    const { innerWidth: width, innerHeight: height } = window
+    return {
+      width,
+      height,
+    }
+  }
+
+  // Default values when window is not defined
+  return {
+    width: 0,
+    height: 0,
+  }
+}
+
 export const TracingBeam = ({
   children,
   className,
@@ -24,22 +40,60 @@ export const TracingBeam = ({
 
   const contentRef = useRef<HTMLDivElement>(null)
   const [svgHeight, setSvgHeight] = useState(0)
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  )
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions())
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight)
+      // Initialize the ResizeObserver API and update svgHeight when the contentRef's clientHeight changes
+      const resizeObserver = new ResizeObserver((entries) => {
+        for (let entry of entries) {
+          setSvgHeight(entry.target.clientHeight)
+        }
+      })
+
+      // Start observing the contentRef
+      const currentContentRef = contentRef.current
+      resizeObserver.observe(currentContentRef)
+
+      // Clean up function
+      return () => {
+        if (currentContentRef) {
+          // Stop observing the contentRef
+          resizeObserver.unobserve(currentContentRef)
+        }
+      }
     }
   }, [])
 
   const y1 = useSpring(
-    useTransform(scrollYProgress, [0, 0.8], [0, svgHeight]),
+    useTransform(
+      scrollYProgress,
+      [0, svgHeight ? (svgHeight - windowDimensions.height) / svgHeight : 0],
+      [0, svgHeight - 10]
+    ),
     {
       stiffness: 500,
       damping: 90,
     }
   )
+
   const y2 = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, svgHeight - 200]),
+    useTransform(
+      scrollYProgress,
+      [0, svgHeight ? (svgHeight - windowDimensions.height) / svgHeight : 0],
+      [0, svgHeight - 210]
+    ),
     {
       stiffness: 500,
       damping: 90,
@@ -88,7 +142,7 @@ export const TracingBeam = ({
           aria-hidden='true'
         >
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 1 0V -36 l 18 24 V ${svgHeight} l -18 24V ${svgHeight}`}
             fill='none'
             stroke='#9091A0'
             strokeOpacity='0.16'
@@ -97,7 +151,7 @@ export const TracingBeam = ({
             }}
           ></motion.path>
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 1 0V -36 l 18 24 V ${svgHeight} l -18 24V ${svgHeight}`}
             fill='none'
             stroke='url(#gradient)'
             strokeWidth='1.25'
