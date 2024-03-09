@@ -46,11 +46,7 @@ export const ContainerScroll = ({
         }}
       >
         <Header titleComponent={titleComponent} />
-        <Card
-          rotate={rotate}
-          scale={scale}
-          image={image}
-        />
+        <Card rotate={rotate} scale={scale} image={image} />
       </div>
     </div>
   )
@@ -72,12 +68,10 @@ export const Header = ({ translate, titleComponent }: any) => {
 export const Card = ({
   rotate,
   scale,
-  translate,
   image,
 }: {
   rotate: any
   scale: any
-  translate: any
   image: React.ReactNode
 }) => {
   return (
@@ -93,7 +87,6 @@ export const Card = ({
       <div className='bg-gray-100 h-full w-full rounded-2xl'>
         <motion.div
           className='bg-white rounded-md cursor-pointer relative'
-          style={{ translateY: translate }}
           whileHover={{
             boxShadow:
               '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
