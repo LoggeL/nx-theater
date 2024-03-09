@@ -76,28 +76,16 @@ export const TracingBeam = ({
     }
   }, [])
 
-  const y1 = useSpring(
-    useTransform(
-      scrollYProgress,
-      [0, svgHeight ? (svgHeight - windowDimensions.height) / svgHeight : 0],
-      [0, svgHeight - 10]
-    ),
-    {
-      stiffness: 500,
-      damping: 90,
-    }
+  const y1 = useTransform(
+    scrollYProgress,
+    [0, svgHeight ? (svgHeight - windowDimensions.height) / svgHeight : 0],
+    [0, svgHeight - 10]
   )
 
-  const y2 = useSpring(
-    useTransform(
-      scrollYProgress,
-      [0, svgHeight ? (svgHeight - windowDimensions.height) / svgHeight : 0],
-      [0, svgHeight - 210]
-    ),
-    {
-      stiffness: 500,
-      damping: 90,
-    }
+  const y2 = useTransform(
+    scrollYProgress,
+    [0, svgHeight ? (svgHeight - windowDimensions.height) / svgHeight : 0],
+    [0, svgHeight - 210]
   )
 
   return (
