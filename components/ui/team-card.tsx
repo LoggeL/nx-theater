@@ -1,3 +1,4 @@
+import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useRef, useEffect, useState } from 'react'
@@ -86,6 +87,8 @@ function TeamCard({ actor }: TeamCardProps) {
         alt='Team member'
         className='rounded-lg object-cover'
         sizes='100% 100%'
+        placeholder='blur'
+        blurDataURL={blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')}
         fill
         priority={true}
       />
