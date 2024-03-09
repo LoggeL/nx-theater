@@ -1,6 +1,5 @@
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { useRef, useEffect, useState } from 'react'
 
 type TeamCardProps = {
@@ -13,8 +12,8 @@ function TeamCard({ actor }: TeamCardProps) {
   const [backgroundImage, setBackgroundImage] = useState('')
   const [transitionDuration, setTransitionDuration] = useState('300ms')
   const [boxShadow, setBoxShadow] = useState('0 1px 5px #00000099')
-  let imageSrc = actor.placeholderHero
-    ? `/img/team/avatar/placeholder.svg`
+  let imageSrc = actor.placeholderAvatar
+    ? blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')
     : `/img/team/avatar/${actor.name}.jpg`
 
   useEffect(() => {
@@ -83,7 +82,7 @@ function TeamCard({ actor }: TeamCardProps) {
       }
     >
       <Image
-        src={imageSrc}
+        src={imageSrc || '/img/team/avatar/placeholder.svg'}
         alt='Team member'
         className='rounded-lg object-cover'
         sizes='100% 100%'

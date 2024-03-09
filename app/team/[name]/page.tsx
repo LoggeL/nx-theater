@@ -4,6 +4,8 @@ import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 import Image from 'next/image'
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 
+import plays from '@/components/data/plays.json'
+
 interface TeamMemberProps {
   params: {
     name: string
@@ -53,80 +55,19 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
   )
 }
 
-const recaps = [
-  {
-    title: 'Bluttribut',
-    year: 2021,
-    img: '/img/banners/bluttribut.jpg',
-    description: 'Ein spannendes Drama über Vampire und ihre Opfer.',
-    link: '/recap/bluttribut',
-    blurHash: 'L59$kG#S~CIo].$jRjs:00Xm9Zxu',
-  },
-  {
-    title: 'Dystopia',
-    year: 2020,
-    img: '/img/banners/dystopia.jpg',
-    description: 'Eine düstere Zukunftsvision in einer dystopischen Welt.',
-    link: '/recap/dystopia',
-    blurHash: 'LGI3pi?E^Nf7HToL%J$$.PNbAGEh',
-  },
-  {
-    title: 'Goldfieber',
-    year: 2016,
-    img: '/img/banners/goldfieber.jpg',
-    description: 'Eine abenteuerliche Suche nach Gold im Wilden Westen.',
-    link: '/recap/goldfieber',
-    blurHash: 'L4EC2X0100Ir~4jZ0mNH4T-o.9E2',
-  },
-  {
-    title: 'Kloster',
-    year: 2017,
-    img: '/img/banners/kloster.jpg',
-    description:
-      'Ein geheimnisvolles Drama, das in einem abgelegenen Kloster spielt.',
-    link: '/recap/kloster',
-    blurHash: 'L7HA@KE100-pQ*~X%ir:?w00xA-;',
-  },
-  {
-    title: 'Kristall',
-    year: 2018,
-    img: '/img/banners/kristall.jpg',
-    description:
-      'Eine magische Geschichte über die Macht eines mystischen Kristalls.',
-    link: '/recap/kristall',
-    blurHash: 'L6Dl$u03XW~X00xVRMjWF*-;ohR*',
-  },
-  {
-    title: 'Maleficarum',
-    year: 2019,
-    img: '/img/banners/maleficarum.jpg',
-    description: 'Ein düsteres Stück über Hexerei und dunkle Magie.',
-    link: '/recap/maleficarum',
-    blurHash: 'L3Kc2a,;03E8{eRUl7S^01ENb@=^',
-  },
-  {
-    title: 'Proben',
-    img: '/img/banners/proben.jpg',
-    description:
-      'Ein Einblick in die harte Arbeit und das Engagement hinter den Kulissen.',
-    link: '/recap/proben',
-    blurHash: 'LAEo[Ixu~qt700IU4nM{_3j[WBxu',
-  },
-]
-
-const items = recaps.map((recap) => {
+const items = plays.map((play) => {
   return {
-    title: recap.title,
-    description: recap.description,
+    title: play.title,
+    description: play.description,
     header: (
       <Image
-        src={recap.img}
-        alt={recap.title}
+        src={play.img}
+        alt={play.title}
         width={1000}
         height={650}
         className='h-60 object-cover rounded-t-lg'
-        // loading='lazy'
-        blurDataURL={blurHashToDataURL(recap.blurHash)}
+        loading='lazy'
+        blurDataURL={blurHashToDataURL(play.blurHash)}
         placeholder='blur'
       />
     ),

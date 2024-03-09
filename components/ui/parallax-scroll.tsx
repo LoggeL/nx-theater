@@ -5,13 +5,12 @@ import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import TeamCard from './team-card'
 
-export const ParallaxScroll = ({
-  actors,
-  className,
-}: {
+type ParallaxScrollProps = {
   actors: any[]
   className?: string
-}) => {
+}
+
+export const ParallaxScroll = ({ actors, className }: ParallaxScrollProps) => {
   const gridRef = useRef<any>(null)
   const { scrollYProgress } = useScroll({
     container: gridRef, // remove this if your container is not fixed height
