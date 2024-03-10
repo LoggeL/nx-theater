@@ -1,9 +1,7 @@
 import { decode } from 'blurhash'
 
-export function blurHashToDataURL(
-  hash: string | undefined
-): string | undefined {
-  if (!hash) return undefined
+export function blurHashToDataURL(hash: string): string {
+  if (!hash) return ''
 
   const pixels = decode(hash, 32, 32)
   const dataURL = parsePixels(pixels, 32, 32)

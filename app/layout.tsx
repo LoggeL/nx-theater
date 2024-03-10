@@ -41,7 +41,8 @@ export default function RootLayout({
               <MenuItem setActive={setActive} active={active} item='Team'>
                 <div className='flex flex-col space-y-4 text-sm'>
                   <HoveredLink href='/about'>Über uns</HoveredLink>
-                  <HoveredLink href='/team'>Unser Team</HoveredLink>
+                  <HoveredLink href='/team/actors'>Schauspieler</HoveredLink>
+                  <HoveredLink href='/team/technic'>Technik</HoveredLink>
                 </div>
               </MenuItem>
               <MenuItem setActive={setActive} active={active} item='Rückblick'>

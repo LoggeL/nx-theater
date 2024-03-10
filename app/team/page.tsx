@@ -1,14 +1,13 @@
-import { ParallaxScroll } from '@/components/ui/parallax-scroll'
 import team from '@/components/data/team.json'
+import Link from 'next/link'
 
 export default function Team() {
   return (
     <div className='flex flex-col h-full w-full'>
-      <div className='flex pt-20 h-auto w-full'>
-        <ParallaxScroll actors={team.current}></ParallaxScroll>
-      </div>
-      <div className='flex pt-20 h-auto w-full'>
-        <ParallaxScroll actors={team.former}></ParallaxScroll>
+      {/* Link to actors and technic */}
+      <div className='flex justify-center items-center flex-col h-20 w-full bg-gray-800 text-gray-100 mt-48'>
+        <Link href='/team/actors'>Schauspieler</Link>
+        <Link href='/team/technic'>Technik</Link>
       </div>
     </div>
   )
