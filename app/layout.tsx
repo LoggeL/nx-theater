@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='h-full w-full'>
       <body
-        className={`${inter.className} w-full h-full bg-black/[0.99] bg-grid-white/[0.01] antialiased`}
+        className={`${inter.className} w-full h-full bg-black/[0.95] antialiased`}
       >
         <div className='flex flex-col md:items-center md:justify-center h-full'>
           <div className='fixed top-10 inset-x-0 max-w-2xl mx-auto z-50'>
@@ -35,7 +35,7 @@ export default function RootLayout({
               <MenuItem setActive={setActive} active={active} item='Home'>
                 <div className='flex flex-col space-y-4 text-sm'>
                   <HoveredLink href='/'>Home</HoveredLink>
-                  <HoveredLink href='/news'>Aktuel</HoveredLink>
+                  <HoveredLink href='/news'>Aktuell</HoveredLink>
                 </div>
               </MenuItem>
               <MenuItem setActive={setActive} active={active} item='Team'>
@@ -61,7 +61,6 @@ export default function RootLayout({
               </MenuItem>
             </Menu>
           </div>
-
           {children}
         </div>
       </body>

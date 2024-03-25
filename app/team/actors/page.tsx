@@ -1,7 +1,7 @@
 import team from '@/components/data/team.json'
 import { ActorsGrid } from '@/components/ui/actors-grid'
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
-import { DirectionAwareHover } from '@/components/ui/direction-aware-hover'
+import { DirectionAwareHover } from '@/components/ui/team-grid'
 
 const cards = team.current.map((actor, i) => ({
   id: i,

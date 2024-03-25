@@ -17,7 +17,7 @@ export default function Home() {
           <div className='text-4xl md:text-6xl'>Kolpingtheater Ramsen</div>
         </h1>
       </div>
-      <div className=''>
+      <div>
         <CardContainer className='inter-var w-full'>
           <CardBody className='group/card aspect-square'>
             <CardItem translateZ='100' className='w-full mt-4 aspect-square'>
