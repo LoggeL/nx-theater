@@ -13,7 +13,7 @@ export default function PlayRecapPage({
 }) {
   const play = params.play
 
-  const cards = pics[play].map(
+  const cards = pics[play as keyof typeof pics].map(
     (
       pic: {
         blurhash: string
@@ -46,27 +46,29 @@ export default function PlayRecapPage({
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
         {cards.map((card) => (
           <div key={card.id} className={card.className}>
-            <div className='relative h-full w-full'>
-              <Image
-                width={card.width}
-                height={card.height}
-                src={card.src}
-                className='object-cover h-full w-full rounded-xl'
-                style={{ aspectRatio: `${card.width}/${card.height}` }}
-                alt={card.alt}
-                placeholder='blur'
-                blurDataURL={blurHashToDataURL(card.blurHash)}
-              />
-              <div
-                className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200'
-                style={{
-                  background:
-                    'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
-                }}
-              >
-                <p className='text-white bottom-0 mt-auto p-2'>{card.alt}</p>
+            <a href={card.src} target='_blank' rel='noopener noreferrer'>
+              <div className='relative h-full w-full'>
+                <Image
+                  width={card.width}
+                  height={card.height}
+                  src={card.src}
+                  className='object-cover h-full w-full rounded-xl'
+                  style={{ aspectRatio: `${card.width}/${card.height}` }}
+                  alt={card.alt}
+                  placeholder='blur'
+                  blurDataURL={blurHashToDataURL(card.blurHash)}
+                />
+                <div
+                  className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200'
+                  style={{
+                    background:
+                      'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
+                  }}
+                >
+                  <p className='text-white bottom-0 mt-auto p-2'>{card.alt}</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>
