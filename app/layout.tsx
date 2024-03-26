@@ -32,13 +32,23 @@ export default function RootLayout({
         <div className='flex flex-col md:items-center md:justify-center h-full'>
           <div className='fixed top-10 inset-x-0 max-w-2xl mx-auto z-50'>
             <Menu setActive={setActive}>
-              <MenuItem setActive={setActive} active={active} item='Home'>
+              <MenuItem
+                setActive={setActive}
+                active={active}
+                item='Home'
+                href='/'
+              >
                 <div className='flex flex-col space-y-4 text-sm'>
                   <HoveredLink href='/'>Home</HoveredLink>
                   <HoveredLink href='/news'>Aktuell</HoveredLink>
                 </div>
               </MenuItem>
-              <MenuItem setActive={setActive} active={active} item='Team'>
+              <MenuItem
+                setActive={setActive}
+                active={active}
+                item='Team'
+                href='/team/actors'
+              >
                 <div className='flex flex-col space-y-4 text-sm'>
                   <HoveredLink href='/about'>Über uns</HoveredLink>
                   <HoveredLink href='/team/actors'>Schauspieler</HoveredLink>

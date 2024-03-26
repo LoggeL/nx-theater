@@ -18,20 +18,24 @@ export const MenuItem = ({
   active,
   item,
   children,
+  href,
 }: {
   setActive: (item: string) => void
   active: string | null
   item: string
   children?: React.ReactNode
+  href?: string
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className='relative border-1 '>
-      <motion.p
-        transition={{ duration: 0.3 }}
-        className='cursor-pointer hover:opacity-[0.9] text-orange-400 dark:text-orange-400'
-      >
-        {item}
-      </motion.p>
+      <a href={href}>
+        <motion.p
+          transition={{ duration: 0.3 }}
+          className='cursor-pointer hover:opacity-[0.9] text-orange-400 dark:text-orange-400'
+        >
+          {item}
+        </motion.p>
+      </a>
       {active !== null && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
@@ -39,11 +43,11 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className='absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2'>
+            <div className='absolute top-full left-1/2 transform -translate-x-1/2'>
               <motion.div
                 transition={transition}
                 layoutId='active' // layoutId ensures smooth animation
-                className='bg-black bg-opacity-85 dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl'
+                className='bg-black bg-opacity-70 dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.2] shadow-xl'
               >
                 <motion.div
                   layout // layout ensures smooth animation
