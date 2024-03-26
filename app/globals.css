@@ -73,9 +73,12 @@
   body {
     @apply bg-background text-foreground;
   }
-}
 
-@masonry-width: 300px;
+  :root {
+    /* ... */
+    --masonry-width: 300px;
+  }
+}
 
 @layer components {
   .masonry {
@@ -98,7 +101,7 @@
 
   .masonry-item {
     @apply break-inside-avoid mb-4;
-    width: @masonry-width;
+    width: var(--masonry-width);
   }
 }
 

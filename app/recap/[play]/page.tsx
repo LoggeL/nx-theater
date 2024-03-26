@@ -30,7 +30,8 @@ export default function PlayRecapPage({
         </div>
       ),
       className: 'md:col-span-1 h-full',
-      src: `/img/gallery_full/${play}/Bild (${i + 1}).jpg`,
+      thumb_src: `/img/gallery_thumbs/${play}/Bild (${i + 1}).jpg`,
+      full_src: `/img/gallery_full/${play}/Bild (${i + 1}).jpg`,
       blurHash: pic.blurhash,
       width: pic.width,
       height: pic.height,
@@ -47,12 +48,12 @@ export default function PlayRecapPage({
         <div className='columns-2 md:columns-3 lg:columns-4 gap-4'>
           {cards.map((card) => (
             <div key={card.id} className='break-inside-avoid mb-4'>
-              <a href={card.src} target='_blank' rel='noopener noreferrer'>
+              <a href={card.full_src} target='_blank' rel='noopener noreferrer'>
                 <div className='relative group'>
                   <Image
                     width={card.width}
                     height={card.height}
-                    src={card.src}
+                    src={card.thumb_src}
                     className='w-full rounded-xl'
                     alt={card.alt}
                     placeholder='blur'
