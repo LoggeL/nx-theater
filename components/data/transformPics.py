@@ -24,23 +24,31 @@ for key in data.keys():
 
     img = Image.open(img_path)
 
-    width = img.width
-    height = img.height
-
     # check if image is rotated with exif data
     try:
       exif = img._getexif()
       orientation = exif[274]
       if orientation == 6:
-        width, height = height, width
+        img = img.rotate(-90, expand=True)
+      elif orientation == 8:
+        img = img.rotate(90, expand=True)
+      elif orientation == 3:
+        img = img.rotate(180, expand=True)
     except:
       pass
+
+    width = img.width
+    height = img.height
+
+    # Convert to RGB if not already
+    if img.mode != "RGB":
+      img = img.convert("RGB")
 
 
     alt = data[key][i]
 
     if not os.path.exists(thumb_path):
-      img.thumbnail((400, 400))
+      img.thumbnail((500, 500))
       img.save(thumb_path)
 
     # ToDo!
