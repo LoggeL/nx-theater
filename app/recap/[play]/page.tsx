@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 import Image from 'next/image'
 
@@ -39,39 +39,73 @@ export default function PlayRecapPage({
   )
 
   return (
-    <div className='h-screen w-full'>
+    <div className='flex flex-col items-center w-full overflow-auto'>
       <h1 className='text-4xl font-bold text-center mb-10 pt-36 text-orange-400'>
         {play.toUpperCase()}
       </h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
-        {cards.map((card) => (
-          <div key={card.id} className={card.className}>
-            <a href={card.src} target='_blank' rel='noopener noreferrer'>
-              <div className='relative h-full w-full'>
-                <Image
-                  width={card.width}
-                  height={card.height}
-                  src={card.src}
-                  className='object-cover h-full w-full rounded-xl'
-                  style={{ aspectRatio: `${card.width}/${card.height}` }}
-                  alt={card.alt}
-                  placeholder='blur'
-                  blurDataURL={blurHashToDataURL(card.blurHash)}
-                />
-                <div
-                  className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200'
-                  style={{
-                    background:
-                      'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
-                  }}
-                >
-                  <p className='text-white bottom-0 mt-auto p-2'>{card.alt}</p>
+      <div className='p-4 w-full'>
+        <div className='columns-2 md:columns-3 lg:columns-4 gap-4'>
+          {cards.map((card) => (
+            <div key={card.id} className='break-inside-avoid mb-4'>
+              <a href={card.src} target='_blank' rel='noopener noreferrer'>
+                <div className='relative group'>
+                  <Image
+                    width={card.width}
+                    height={card.height}
+                    src={card.src}
+                    className='w-full rounded-xl'
+                    alt={card.alt}
+                    placeholder='blur'
+                    blurDataURL={blurHashToDataURL(card.blurHash)}
+                  />
+                  <div
+                    className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200'
+                    style={{
+                      background:
+                        'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
+                    }}
+                  >
+                    <p className='text-white bottom-0 mt-auto p-2'>
+                      {card.alt}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-        ))}
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
+}
+
+{
+  /* <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+{cards.map((card) => (
+  <div key={card.id} className={card.className}>
+    <a href={card.src} target='_blank' rel='noopener noreferrer'>
+      <div className='relative h-full w-full'>
+        <Image
+          width={card.width}
+          height={card.height}
+          src={card.src}
+          className='object-cover h-full w-full rounded-xl'
+          style={{ aspectRatio: `${card.width}/${card.height}` }}
+          alt={card.alt}
+          placeholder='blur'
+          blurDataURL={blurHashToDataURL(card.blurHash)}
+        />
+        <div
+          className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200'
+          style={{
+            background:
+              'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
+          }}
+        >
+          <p className='text-white bottom-0 mt-auto p-2'>{card.alt}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+))} */
 }
