@@ -101,7 +101,7 @@ export const ProductItem = ({
         width={170}
         height={100}
         alt={title}
-        className='flex-shrink-0 rounded-md shadow-2xl'
+        className='flex-shrink-0 rounded-md shadow-2xl hidden md:block'
         placeholder='blur'
         blurDataURL={blurDataURL}
       />
