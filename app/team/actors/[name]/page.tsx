@@ -2,7 +2,6 @@ import { Spotlight } from '@/components/ui/spotlight'
 import React from 'react'
 import Image from 'next/image'
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
-import { InfiniteMovingCards } from '@/components/ui/actors-plays'
 
 import team from '@/components/data/team.json'
 
@@ -36,77 +35,52 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
         className='-top-40 left-0 md:left-60 md:-top-20 h-full'
         fill='white'
       />
-      <div className='p-4 max-w-7xl mx-auto relative z-10 w-full mt-32'>
+      <div className='p-8 max-w-8xl mx-auto relative z-10 w-full mt-32'>
         {/* 3 Col setup */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          <div
-            className='w-full max-w-full relative rounded-xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]'
-            style={{
-              background:
-                'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
-            }}
-          >
-            {/* About */}
-            <div className='text-center text-4xl font-bold text-orange-500'>
-              Über mich
-            </div>
-            <div className='text-lg text-white font-normal mt-8'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque
-              nihil. Sapiente impedit eveniet ipsum voluptates sint nobis culpa
-              rerum velit, excepturi nemo eius nostrum, beatae, accusamus
-              molestias non dignissimos?
-            </div>
-          </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className='w-full h-full aspect-square relative order-first sm:order-none'>
+            <div className='text-3xl font-bold text-orange-500 md:hidden sm:block p-8'>
+              {actor.name}
+            </div>
             <Image
-              src={'/img/team/avatar/' + name + '.jpg'}
-              height='1000'
+              // src={'/img/team/avatar/' + name + '.jpg'}
+              src='/img/other_images/placeholder.webp'
+              height='2000'
               width='1000'
-              className='object-cover rounded-xl mx-auto aspect-square'
+              className='object-cover rounded-xl mx-auto'
               alt={name}
               priority={true}
               loading='eager'
               placeholder='blur'
               blurDataURL={blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')}
             />
-            <div
-              className='absolute inset-0'
-              style={{
-                background:
-                  'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 00), rgba(0, 0, 0, 0))',
-              }}
-            >
-              <div className='absolute bottom-0 left-0 w-full  p-4 text-orange-400  text-2xl font-bold text-center'>
-                {name}
-              </div>
-            </div>
           </div>
-          <div
-            className='w-full max-w-full relative rounded-xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6'
-            style={{
-              background:
-                'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
-            }}
-          >
-            {/* Tasks */}
-            <div className='text-center text-4xl font-bold text-orange-500'>
-              Meine Stärken
+          <div className='p-4'>
+            <div className='text-3xl font-bold text-orange-500 sm:hidden md:block '>
+              {actor.name}
             </div>
-            <ul className='text-lg text-white font-normal mt-8'>
-              <li>Stärke 1</li>
-              <li>Stärke 2</li>
-              <li>Stärke 3</li>
-              <li>Ich habe keine Stärken</li>
-            </ul>
+            <p className='text-lg font-bold text-white'>
+              <br />
+              Paar Daten
+              <br />
+              Noch mehr Daten
+              <br />
+              <br />
+              Hat mitgespielt in:
+              <br />
+              <table>
+                {roles.map((role) => (
+                  <tr
+                    key={role.role}
+                    className='border-t-2 border-b-2 border-white border-opacity-50'
+                  >
+                    <td className='text-white pr-4'>{role.play}</td>
+                    <td className='text-white'>{role.role}</td>
+                  </tr>
+                ))}
+              </table>
+            </p>
           </div>
-        </div>
-
-        {/* Roles */}
-        <div className='text-center text-4xl font-bold mt-16 text-orange-500 w-full'>
-          Rollen
-        </div>
-        <div className='rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center  relative overflow-hidden'>
-          <InfiniteMovingCards items={roles} direction='right' speed='slow' />
         </div>
       </div>
     </div>

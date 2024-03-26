@@ -1,27 +1,59 @@
 [
     {
-        "title": "Bluttribut",
+        "title": "Sagenhaft",
+        "year": 2024,
+        "img": "/img/banners/sagenhaft.jpg",
+        "description": "Eine mystische Reise durch die Ramser Sagenwelt.",
+        "link": "/recap/sagenhaft",
+        "blurHash": "L5BV3a-C0JIw0@%1M]XUvvVr~EX8"
+    },
+    {
+        "title": "Traum von Freiheit",
+        "year": 2023,
+        "img": "/img/banners/freiheit.jpg",
+        "description": "Ein packendes Piratenabenteuer auf hoher See.",
+        "link": "/recap/freiheit",
+        "blurHash": "L9CF@jXT0fMxyr%L9GIV.m-V9FE2"
+    },
+    {
+        "title": "Goldfieber",
+        "year": 2022,
+        "img": "/img/banners/goldfieber.jpg",
+        "description": "Eine abenteuerliche Suche nach Gold im Wilden Westen.",
+        "link": "/recap/goldfieber",
+        "blurHash": "L4EC2X0100Ir~4jZ0mNH4T-o.9E2"
+    },
+    {
+        "title": "Maleficarum",
         "year": 2021,
-        "img": "/img/banners/bluttribut.jpg",
-        "description": "Ein spannendes Drama über Vampire und ihre Opfer.",
-        "link": "/recap/bluttribut",
-        "blurHash": "L59$kG#S~CIo].$jRjs:00Xm9Zxu"
+        "img": "/img/banners/maleficarum.jpg",
+        "description": "Ein düsteres Stück über Hexerei und dunkle Magie.",
+        "link": "/recap/maleficarum",
+        "blurHash": "L3Kc2a,;03E8{eRUl7S^01ENb@=^"
+    },
+    {
+        "title": "Kristall",
+        "year": 2020,
+        "img": "/img/banners/kristall.jpg",
+        "description": "Eine magische Geschichte über die Macht eines mystischen Kristalls.",
+        "link": "/recap/kristall",
+        "blurHash": "L6Dl$u03XW~X00xVRMjWF*-;ohR*"
     },
     {
         "title": "Dystopia",
-        "year": 2020,
+        "year": 2019,
         "img": "/img/banners/dystopia.jpg",
         "description": "Eine düstere Zukunftsvision in einer dystopischen Welt.",
         "link": "/recap/dystopia",
         "blurHash": "LGI3pi?E^Nf7HToL%J$$.PNbAGEh"
     },
     {
-        "title": "Goldfieber",
-        "year": 2016,
-        "img": "/img/banners/goldfieber.jpg",
-        "description": "Eine abenteuerliche Suche nach Gold im Wilden Westen.",
-        "link": "/recap/goldfieber",
-        "blurHash": "L4EC2X0100Ir~4jZ0mNH4T-o.9E2"
+        "title": "Bluttribut",
+        "year": 2018,
+        "img": "/img/banners/bluttribut.jpg",
+        "description": "Ein spannendes Drama über Vampire und ihre Opfer.",
+        "link": "/recap/bluttribut",
+        "blurHash": "L59$kG#S~CIo].$jRjs:00Xm9Zxu"
     },
     {
         "title": "Kloster",
@@ -30,22 +62,6 @@
         "description": "Ein geheimnisvolles Drama, das in einem abgelegenen Kloster spielt.",
         "link": "/recap/kloster",
         "blurHash": "L7HA@KE100-pQ*~X%ir:?w00xA-;"
-    },
-    {
-        "title": "Kristall",
-        "year": 2018,
-        "img": "/img/banners/kristall.jpg",
-        "description": "Eine magische Geschichte über die Macht eines mystischen Kristalls.",
-        "link": "/recap/kristall",
-        "blurHash": "L6Dl$u03XW~X00xVRMjWF*-;ohR*"
-    },
-    {
-        "title": "Maleficarum",
-        "year": 2019,
-        "img": "/img/banners/maleficarum.jpg",
-        "description": "Ein düsteres Stück über Hexerei und dunkle Magie.",
-        "link": "/recap/maleficarum",
-        "blurHash": "L3Kc2a,;03E8{eRUl7S^01ENb@=^"
     },
     {
         "title": "Proben",

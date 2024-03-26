@@ -4,22 +4,22 @@ import json
 import blurhash
 import numpy as np
 
-with open('src/assets/json/pics.json', 'r', encoding='utf-8') as f:
+with open('pics_raw.json', 'r', encoding='utf-8') as f:
   data = json.load(f)
 
 images = {}
 
 for key in data.keys():
   # If thumbs doesn't exist, create it
-  if not os.path.exists(f"public/img/gallery_thumbs/{key}"):
-    os.makedirs(f"public/img/gallery_thumbs/{key}")
+  if not os.path.exists(f"../../public/img/gallery_thumbs/{key}"):
+    os.makedirs(f"../../public/img/gallery_thumbs/{key}")
 
   images[key] = []
 
   num_items = len(data[key])
 
   for i in range(num_items):
-    img_path = f"public/img/gallery_full/{key}/Bild ({i + 1}).jpg"
+    img_path = f"../../public/img/gallery_full/{key}/Bild ({i + 1}).jpg"
     thumb_path = img_path.replace("gallery_full", "gallery_thumbs")
 
     img = Image.open(img_path)
@@ -51,5 +51,5 @@ for key in data.keys():
 
     print(key, i)
 
-with open('src/assets/json/images.json', 'w') as f:
+with open('pics.json', 'w') as f:
   json.dump(images, f)
