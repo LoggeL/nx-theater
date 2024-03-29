@@ -36,18 +36,18 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
         fill='white'
       />
       <div className='p-8 max-w-8xl mx-auto relative z-10 w-full mt-32'>
-        {/* 3 Col setup */}
+        {/* n Col setup */}
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <div className='w-full h-full aspect-square relative order-first sm:order-none'>
+          <div className='w-full h-full relative order-first sm:order-none'>
             <div className='text-3xl font-bold text-orange-500 md:hidden sm:block p-8'>
               {actor.name}
             </div>
             <Image
               // src={'/img/team/avatar/' + name + '.jpg'}
-              src='/img/other_images/placeholder.webp'
+              src='/img/team/hero/Sebastian.jpg'
               height='2000'
               width='1000'
-              className='object-cover rounded-xl mx-auto'
+              className='object-cover rounded-xl mx-auto sm:w-full md:w-3/4 lg:w-1/2'
               alt={name}
               priority={true}
               loading='eager'
@@ -68,18 +68,21 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
               <br />
               Hat mitgespielt in:
               <br />
-              <table>
-                {roles.map((role) => (
-                  <tr
-                    key={role.role}
-                    className='border-t-2 border-b-2 border-white border-opacity-50'
-                  >
-                    <td className='text-white pr-4'>{role.play}</td>
-                    <td className='text-white'>{role.role}</td>
-                  </tr>
-                ))}
-              </table>
             </p>
+            <div className='w-full'>
+              <div>
+                <p className='text-white w-1/2 float-left'>Stück</p>
+                <p className='text-white w-1/2 float-right'>Rolle</p>
+                <div className='w-full clear-both border-b-white border-solid border-2 border-opacity-20 mt-2'></div>
+              </div>
+              {roles.map((role) => (
+                <div key={role.role} className='mt-2'>
+                  <p className='text-white w-1/2 float-left'>{role.play}</p>
+                  <p className='text-white w-1/2 float-right'>{role.role}</p>
+                  <div className='w-full clear-both border-b-white border-solid border-2 border-opacity-20 mt-2'></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

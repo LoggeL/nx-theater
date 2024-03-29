@@ -1,8 +1,8 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import Image from 'next/image'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 import Link from 'next/link'
@@ -28,7 +28,7 @@ export const DirectionAwareHover = ({
     <div
       ref={ref}
       className={cn(
-        'md:h-96 w-60 h-60 md:w-96 bg-transparent rounded-lg overflow-hidden group/card relative',
+        'w-60 h-120 bg-transparent rounded-lg overflow-hidden group/card relative',
         className
       )}
     >
@@ -50,7 +50,7 @@ export const DirectionAwareHover = ({
             placeholder='blur'
             blurDataURL={blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')}
             width='1000'
-            height='1000'
+            height='2000'
             src={imageUrl}
           />
         </motion.div>

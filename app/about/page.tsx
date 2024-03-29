@@ -17,7 +17,6 @@ export default function HeroScrollDemo() {
             src='/img/other_images/Group.webp'
             height='800'
             width='1200'
-            layout='responsive'
             alt='Hero'
           />
         }
@@ -66,7 +65,6 @@ export default function HeroScrollDemo() {
                         src={`/img/${item.image}`}
                         width={1200}
                         height={800}
-                        layout='responsive'
                         alt={item.header}
                       />
                     </a>

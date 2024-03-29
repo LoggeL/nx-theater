@@ -1,25 +1,6 @@
 import team from '@/components/data/team.json'
-import { ActorsGrid } from '@/components/ui/actors-grid'
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
-import { DirectionAwareHover } from '@/components/ui/team-grid'
-
-const cards = team.current.map((actor, i) => ({
-  id: i,
-  className: 'md:col-span-1',
-  content: (
-    <DirectionAwareHover
-      link={`/team/actors/${actor.name}`}
-      imageUrl={
-        actor.placeholderAvatar
-          ? blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')
-          : `/img/team/avatar/${actor.name}.jpg`
-      }
-    >
-      <p className='font-bold text-xl'>{actor.name}</p>
-    </DirectionAwareHover>
-  ),
-  link: `/team/actors/${actor.name}`,
-}))
+import Image from 'next/image'
 
 export default function Team() {
   return (
@@ -27,7 +8,50 @@ export default function Team() {
       <h1 className='text-4xl font-bold text-center mb-10 pt-20 text-orange-400'>
         Unser Ensemble
       </h1>
-      <ActorsGrid cards={cards} />
+      <div className='flex items-center w-full overflow-auto'>
+        <div className='p-4 w-full'>
+          <div className='flex flex-wrap'>
+            {team.current.map((actor) => (
+              <div
+                key={actor.name}
+                className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4'
+              >
+                <a
+                  href={`/team/actors/${actor.name}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <div className='relative group'>
+                    <Image
+                      width={400}
+                      height={800}
+                      // src={`/img/team/avatar/${actor.name}.jpg`}
+                      src='/img/team/avatar/Sebastian.jpg'
+                      className='w-full rounded-xl'
+                      alt={actor.name}
+                      placeholder='blur'
+                      blurDataURL={blurHashToDataURL(
+                        'LuD,jJyGEANPyXtRV@WBc6ounOR*'
+                      )}
+                    />
+                    <div
+                      className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'
+                      style={{
+                        background:
+                          'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
+                      }}
+                    >
+                      <p className='text-orange-400 bottom-0 mt-auto p-2 text-3xl font-bold'>
+                        {actor.name}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
