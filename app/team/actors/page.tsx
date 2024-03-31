@@ -1,6 +1,7 @@
 import team from '@/components/data/team.json'
 import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Team() {
   return (
@@ -16,11 +17,7 @@ export default function Team() {
                 key={actor.name}
                 className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4'
               >
-                <a
-                  href={`/team/actors/${actor.name}`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
+                <Link href={`/team/actors/${actor.name}`}>
                   <div className='relative group'>
                     <Image
                       width={400}
@@ -46,7 +43,7 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
