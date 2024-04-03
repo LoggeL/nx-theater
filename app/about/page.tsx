@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 import history from '@/components/data/history.json'
+// Reverse
+history.reverse()
 
 export default function HeroScrollDemo() {
   return (
@@ -15,7 +17,7 @@ export default function HeroScrollDemo() {
         image={
           <Image
             src='/img/other_images/Group.webp'
-            height='800'
+            height='660'
             width='1200'
             alt='Hero'
           />
@@ -34,7 +36,7 @@ export default function HeroScrollDemo() {
       <div>
         <TracingBeam className='px-6 h-auto'>
           <div className='max-w-2xl mx-auto antialiased pt-4 relative'>
-            {history.reverse().map((item, i) => (
+            {history.map((item, i) => (
               <div key={i} className='mb-8'>
                 {i === 0 && (
                   <h1 className='text-4xl font-bold text-orange-400 dark:text-orange-400 mt-8 border-b-2 border-orange-400 dark:border-orange-400 pt-4 -ml-4 my-4'>
