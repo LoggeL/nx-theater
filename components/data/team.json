@@ -77,22 +77,6 @@
             ]
         },
         {
-            "name": "Fynn",
-            "roles": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                "George",
-                "Admiral Rodrigo",
-                null,
-                null
-            ],
-            "placeholder": true
-        },
-        {
             "name": "Jonas",
             "blurhash": "L69sI}01}[9[r=xa5R^iEM$%NHay",
             "roles": [
@@ -221,7 +205,7 @@
         },
         {
             "name": "Max",
-            "placeholder": "LfG8WPIU-pj[~WM|t7oe-pt7NGj[",
+            "blurhash": "LfG8WPIU-pj[~WM|t7oe-pt7NGj[",
             "roles": [
                 null,
                 null,
@@ -463,6 +447,22 @@
                 "Matteo",
                 null
             ]
+        },
+        {
+            "name": "Fynn",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                "George",
+                "Admiral Rodrigo",
+                null,
+                null
+            ],
+            "placeholder": true
         },
         {
             "name": "Jack",

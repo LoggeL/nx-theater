@@ -48,13 +48,16 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
                   ? blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')
                   : '/img/team/' + name + '.jpg'
               }
-              height='2000'
-              width='1000'
+              width={1500}
+              height={2300}
               className='object-cover rounded-xl mx-auto sm:w-full md:w-3/4 lg:w-1/2'
               alt={name}
               priority={true}
               loading='eager'
               placeholder='blur'
+              style={{
+                aspectRatio: '2/3',
+              }}
               blurDataURL={
                 actor.blurhash
                   ? blurHashToDataURL(actor.blurhash)
