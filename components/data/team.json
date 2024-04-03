@@ -8,7 +8,8 @@
         "2021 “Malleus Maleficarum”",
         "2022 “Goldfieber”",
         "2023 “Traum von Freiheit”",
-        "2023 “Sagenhaft” (Kreativbühne)"
+        "2023 “Sagenhaft” (Kreativbühne)",
+        "2024 “Nexus”"
     ],
     "current": [
         {
@@ -22,11 +23,14 @@
                 "Fürstbischof Reinhard",
                 "Morgan Bullock",
                 "Laurent",
-                null
-            ]
+                null,
+                "Hunter"
+            ],
+            "placeholder": true
         },
         {
             "name": "Carina",
+            "blurhash": "LKJ@g$0L~q$x%hD%%Max9bV[bIW=",
             "roles": [
                 "Jacky",
                 "Prinzessin Helen",
@@ -36,7 +40,8 @@
                 "Helene",
                 "Maggy",
                 "Marry Reed",
-                null
+                null,
+                "Alesa"
             ]
         },
         {
@@ -50,12 +55,14 @@
                 null,
                 null,
                 "Ensemble",
-                "Johanna"
-            ]
+                "Johanna",
+                "Aria"
+            ],
+            "placeholder": true
         },
         {
             "name": "Fernanda",
-            "placeholderAvatar": true,
+            "blurhash": "L8A,wk4T4m%1~q9FNHxuE2WA-pxv",
             "roles": [
                 null,
                 null,
@@ -65,7 +72,8 @@
                 null,
                 null,
                 "Ensemble",
-                "Magd"
+                "Magd",
+                "Ensemble"
             ]
         },
         {
@@ -79,11 +87,14 @@
                 null,
                 "George",
                 "Admiral Rodrigo",
+                null,
                 null
-            ]
+            ],
+            "placeholder": true
         },
         {
             "name": "Jonas",
+            "blurhash": "L69sI}01}[9[r=xa5R^iEM$%NHay",
             "roles": [
                 null,
                 null,
@@ -93,11 +104,13 @@
                 "Ensemble",
                 "Jesse",
                 "Ensemble",
-                "Berthold von Winzingen"
+                "Berthold von Winzingen",
+                "Ripper"
             ]
         },
         {
             "name": "Julian",
+            "blurhash": "L6BV-L4p_M^#%3_1xvI[EbbpIXxb",
             "roles": [
                 "Bühnentechnik",
                 "Ensemble",
@@ -107,7 +120,8 @@
                 "Ensemble",
                 "Jim / John",
                 "Ensemble",
-                "Bühnentechnik"
+                "Bühnentechnik",
+                "Richter"
             ]
         },
         {
@@ -121,11 +135,14 @@
                 "Maren",
                 "Kate O`Hara",
                 "Anne Bonny",
-                null
-            ]
+                null,
+                "Raven"
+            ],
+            "placeholder": true
         },
         {
             "name": "Leon",
+            "blurhash": "LSAmh@%gWBWB~q%MRjay_3%MRiay",
             "roles": [
                 null,
                 "Graf Philipp",
@@ -135,21 +152,8 @@
                 "Georg",
                 "Ben McConnell",
                 "Ensemble",
-                null
-            ]
-        },
-        {
-            "name": "Louis",
-            "roles": [
                 null,
-                null,
-                null,
-                null,
-                "Arno",
-                "Pater Heinrich",
-                "Frank McConnel",
-                "Edward Teach “Blackbeard”",
-                null
+                "Collin Charleston"
             ]
         },
         {
@@ -163,11 +167,29 @@
                 null,
                 "Rose",
                 "Ensemble",
-                "Junge Johanna/ Ensemble"
+                "Junge Johanna/ Ensemble",
+                "Daria"
+            ]
+        },
+        {
+            "name": "Louis",
+            "blurhash": "LEC~h~~X54EKJOtRxbof0xoz=}xa",
+            "roles": [
+                null,
+                null,
+                null,
+                null,
+                "Arno",
+                "Pater Heinrich",
+                "Frank McConnel",
+                "Edward Teach “Blackbeard”",
+                null,
+                "Blade"
             ]
         },
         {
             "name": "Magdalena",
+            "blurhash": "LFB3pNxu.8%M~poeWVt7S2a#IUWC",
             "roles": [
                 null,
                 null,
@@ -177,7 +199,8 @@
                 null,
                 "Ensemble",
                 "Carmen",
-                null
+                null,
+                "Serenity Chrome"
             ]
         },
         {
@@ -191,11 +214,14 @@
                 "Ruth",
                 "Lilly",
                 "Isabella Mendoza",
-                null
-            ]
+                null,
+                "Seraphina Chrome"
+            ],
+            "placeholder": true
         },
         {
             "name": "Max",
+            "placeholder": "LfG8WPIU-pj[~WM|t7oe-pt7NGj[",
             "roles": [
                 null,
                 null,
@@ -205,11 +231,13 @@
                 "Ensemble",
                 "Bill",
                 "Ensemble",
-                "Bühnentechnik"
+                "Bühnentechnik",
+                "Ensemble / Kameramann"
             ]
         },
         {
             "name": "Maximilian",
+            "blurhash": "TbDl[_tR%M~pxuxu%M%MR%oJ%2Rj",
             "roles": [
                 null,
                 "Ensemble",
@@ -219,11 +247,13 @@
                 "Ensemble",
                 "Zeitungsausträger",
                 "Ensemble",
-                null
+                null,
+                "Ensemble"
             ]
         },
         {
             "name": "Nela",
+            "blurhash": "TBEf4kV@?6-r-pEA4q%MD-~lkC$u",
             "roles": [
                 null,
                 null,
@@ -233,11 +263,13 @@
                 null,
                 null,
                 "Ensemble",
-                "Junge Marie/ Ensemble"
+                "Junge Marie/ Ensemble",
+                "Freya"
             ]
         },
         {
             "name": "Nele",
+            "blurhash": "TMF5y]0L^*~VE1IpxukB4o?GRjM{",
             "roles": [
                 null,
                 null,
@@ -247,11 +279,13 @@
                 "Ensemble",
                 "Annie",
                 "Megan",
-                "Marie"
+                "Marie",
+                "Vega"
             ]
         },
         {
             "name": "Niko",
+            "blurhash": "TEI4z@004.~V9Fo}01-:oz%Lt7M{",
             "roles": [
                 null,
                 null,
@@ -261,11 +295,13 @@
                 null,
                 "Will",
                 "Ensemble",
-                "Knappe/ Ensemble"
+                "Knappe/ Ensemble",
+                "Jakko"
             ]
         },
         {
             "name": "Raphael",
+            "blurhash": "TnI;t~~W-p%1ofWX%2RjIoRjayoL",
             "roles": [
                 null,
                 null,
@@ -275,11 +311,13 @@
                 null,
                 null,
                 "Ensemble",
-                "Liebhaber/ Ensemble"
+                "Liebhaber/ Ensemble",
+                "Ensemble / Gefangener"
             ]
         },
         {
             "name": "Sebastian",
+            "blurhash": "T8D,7n00_4-KIo9b=@?bMxb_NKD%",
             "roles": [
                 "Regie",
                 "Ensemble / Regie",
@@ -289,11 +327,13 @@
                 "Ensemble / Regie",
                 "Doc William Mc Allister / Regie",
                 "Capitan Javier / Regie",
-                "Regie"
+                "Regie",
+                "Dante"
             ]
         },
         {
             "name": "Sophia",
+            "blurhash": "TOD07NW?-;~qM|kC%MM{IUo0M{M{",
             "roles": [
                 null,
                 null,
@@ -303,11 +343,13 @@
                 null,
                 null,
                 "Ensemble",
-                null
+                null,
+                "Künstliche Intelligenz"
             ]
         },
         {
             "name": "Theresa",
+            "blurhash": "T7BpndL}n1w?M^t.E2RixZ%%RixC",
             "roles": [
                 null,
                 null,
@@ -317,11 +359,13 @@
                 null,
                 null,
                 "Ensemble",
-                "Emma"
+                "Emma",
+                "Nyra"
             ]
         },
         {
             "name": "Tobias",
+            "blurhash": "TgE.wnxu-:~VoeWV?GaxRkozRkNH",
             "roles": [
                 null,
                 null,
@@ -331,12 +375,13 @@
                 "Ensemble",
                 "Edward Smith",
                 "Ensemble",
-                "Bär/ Ensemble"
+                "Bär/ Ensemble",
+                "Barkeeper"
             ]
         },
         {
             "name": "Vanessa",
-            "placeholderAvatar": true,
+            "blurhash": "TTGa|C~V-p$e%1o}IWE2WqXSs:jF",
             "roles": [
                 null,
                 null,
@@ -346,11 +391,13 @@
                 null,
                 null,
                 null,
-                "Monster"
+                "Monster",
+                "Delya Delloraine"
             ]
         },
         {
             "name": "Yunus",
+            "blurhash": "TKE2Oepco_~V^+W?.8?HV@-o%2kC",
             "roles": [
                 null,
                 null,
@@ -360,7 +407,8 @@
                 "Technik",
                 "Thomas",
                 "Jack Rackham",
-                null
+                null,
+                "Xion"
             ]
         }
     ],

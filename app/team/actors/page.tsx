@@ -20,16 +20,25 @@ export default function Team() {
                 <Link href={`/team/actors/${actor.name}`}>
                   <div className='relative group'>
                     <Image
-                      width={400}
-                      height={800}
-                      // src={`/img/team/avatar/${actor.name}.jpg`}
-                      src='/img/team/avatar/Sebastian.jpg'
+                      width={1500}
+                      height={2300}
+                      src={
+                        actor.placeholder
+                          ? blurHashToDataURL('LKK15b0L~q$x%hD%%Max9bV[bbW=')
+                          : `/img/team/${actor.name}.jpg`
+                      }
+                      style={{
+                        aspectRatio: '2/3',
+                      }}
+                      // src='/img/team/avatar/Sebastian.jpg'
                       className='w-full rounded-xl'
                       alt={actor.name}
                       placeholder='blur'
-                      blurDataURL={blurHashToDataURL(
-                        'LuD,jJyGEANPyXtRV@WBc6ounOR*'
-                      )}
+                      blurDataURL={
+                        actor.blurhash
+                          ? blurHashToDataURL(actor.blurhash)
+                          : blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')
+                      }
                     />
                     <div
                       className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'

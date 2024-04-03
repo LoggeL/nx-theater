@@ -43,8 +43,11 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
               {actor.name}
             </div>
             <Image
-              // src={'/img/team/avatar/' + name + '.jpg'}
-              src='/img/team/hero/Sebastian.jpg'
+              src={
+                actor.placeholder
+                  ? blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')
+                  : '/img/team/' + name + '.jpg'
+              }
               height='2000'
               width='1000'
               className='object-cover rounded-xl mx-auto sm:w-full md:w-3/4 lg:w-1/2'
@@ -52,7 +55,11 @@ export default function TeamMemberPage({ params }: TeamMemberProps) {
               priority={true}
               loading='eager'
               placeholder='blur'
-              blurDataURL={blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')}
+              blurDataURL={
+                actor.blurhash
+                  ? blurHashToDataURL(actor.blurhash)
+                  : blurHashToDataURL('LuD,jJyGEANPyXtRV@WBc6ounOR*')
+              }
             />
           </div>
           <div className='p-4'>
