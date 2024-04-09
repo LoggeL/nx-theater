@@ -586,33 +586,63 @@
     "tech": [
         {
             "name": "Christian",
-            "icon": "camera",
-            "job": "Videotechnik"
+            "blurhash": "LkLNY=oe~pt7-oWBIoRkxuIUM{t7",
+            "roles": [
+                "Kamera",
+                "Bühnenbau"
+            ]
         },
         {
             "name": "Daniel",
-            "icon": "lightbulb",
-            "job": "Lichttechnik"
+            "roles": [
+                "Lichttechnik"
+            ],
+            "placeholder": true
         },
         {
             "name": "Florian",
-            "icon": "settings",
-            "job": "Bühnentechnik"
+            "roles": [
+                "Bühnentechnik"
+            ],
+            "placeholder": true
+        },
+        {
+            "name": "Logge",
+            "placeholder": true,
+            "roles": [
+                "Website"
+            ]
+        },
+        {
+            "name": "Julian",
+            "blurhash": "L6BV-L4p_M^#%3_1xvI[EbbpIXxb",
+            "roles": [
+                "Bühnenbau",
+                "Requisitenbau"
+            ]
         },
         {
             "name": "Leo",
-            "icon": "settings",
-            "job": "Bühnentechnik"
+            "roles": [
+                "Bühnentechnik",
+                "Bühnenbau",
+                "Kamera"
+            ],
+            "placeholder": true
         },
         {
             "name": "Noah",
-            "icon": "lightbulb",
-            "job": "Lichttechnik (Strobo)"
+            "roles": [
+                "Lichttechnik"
+            ],
+            "placeholder": true
         },
         {
             "name": "Wolfgang",
-            "icon": "headphones",
-            "job": "Tontechnik"
+            "roles": [
+                "Tontechnik"
+            ],
+            "placeholder": true
         }
     ]
 }

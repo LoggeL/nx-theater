@@ -52,7 +52,7 @@ export default function RootLayout({
                 <div className='flex flex-col space-y-4 text-sm'>
                   <HoveredLink href='/about'>Über uns</HoveredLink>
                   <HoveredLink href='/team/actors'>Schauspieler</HoveredLink>
-                  <HoveredLink href='/team/technic'>Technik</HoveredLink>
+                  <HoveredLink href='/team/tech'>Technik</HoveredLink>
                 </div>
               </MenuItem>
               <MenuItem setActive={setActive} active={active} item='Rückblick'>
