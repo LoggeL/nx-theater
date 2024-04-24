@@ -41,6 +41,7 @@ export default function RootLayout({
                 <div className='flex flex-col space-y-4 text-sm'>
                   <HoveredLink href='/'>Home</HoveredLink>
                   <HoveredLink href='/news'>Aktuell</HoveredLink>
+                  <HoveredLink href='/projects'>Projekte</HoveredLink>
                 </div>
               </MenuItem>
               <MenuItem
