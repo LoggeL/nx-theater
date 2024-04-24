@@ -14,7 +14,6 @@ interface ProjectPageProps {
 export default function ProjectPage({ params }: ProjectPageProps) {
   const id = params.project
   const project = projects.find((project) => project.id == id)
-  console.log(projects, id)
   if (!project) {
     return <div>404</div>
   }
