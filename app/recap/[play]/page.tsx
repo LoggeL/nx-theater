@@ -5,15 +5,36 @@ import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 import Image from 'next/image'
 
 import pics from '@/components/data/pics.json'
+import plays from '@/components/data/plays.json'
 
 export default function PlayRecapPage({
   params,
 }: {
   params: { play: string }
 }) {
-  const play = params.play
+  const [currentLightboxIndex, setCurrentLightboxIndex] = React.useState(0)
+  const [isLightboxOpen, setIsLightboxOpen] = React.useState(false)
+  const [imageOpacity, setImageOpacity] = React.useState(1)
 
-  const cards = pics[play as keyof typeof pics].map(
+  const setCurrentLightboxIndexWrapper = (index: number | null) => {
+    if (index === null) {
+      setIsLightboxOpen(false)
+    } else {
+      setImageOpacity(0)
+      setTimeout(() => {
+        setCurrentLightboxIndex(index)
+        setImageOpacity(1)
+      }, 500) // This should match the duration of the transition
+    }
+  }
+
+  const playId = params.play
+  const play = plays.find((play) => play.id === playId)
+  if (!play) {
+    return <div>404</div>
+  }
+
+  const cards = pics[playId as keyof typeof pics].map(
     (
       pic: {
         blurhash: string
@@ -30,8 +51,8 @@ export default function PlayRecapPage({
         </div>
       ),
       className: 'md:col-span-1 h-full',
-      thumb_src: `/img/gallery_thumbs/${play}/Bild (${i + 1}).jpg`,
-      full_src: `/img/gallery_full/${play}/Bild (${i + 1}).jpg`,
+      thumb_src: `/img/gallery_thumbs/${playId}/Bild (${i + 1}).jpg`,
+      full_src: `/img/gallery_full/${playId}/Bild (${i + 1}).jpg`,
       blurHash: pic.blurhash,
       width: pic.width,
       height: pic.height,
@@ -39,14 +60,11 @@ export default function PlayRecapPage({
     })
   )
 
-  const [currentLightboxIndex, setCurrentLightboxIndex] = React.useState(0)
-  const [isLightboxOpen, setIsLightboxOpen] = React.useState(false)
-
   return (
-    <>
+    <div className='h-screen py-20 w-full'>
       <div className='flex flex-col items-center w-full overflow-auto'>
         <h1 className='text-4xl font-bold text-center mb-10 pt-36 text-orange-400'>
-          {play.toUpperCase()}
+          {play.title}
         </h1>
         <div className='p-4 w-full'>
           <div className='columns-2 md:columns-3 lg:columns-4 gap-4'>
@@ -55,7 +73,7 @@ export default function PlayRecapPage({
                 <div
                   className='relative group cursor-pointer'
                   onClick={() => {
-                    setCurrentLightboxIndex(card.id)
+                    setCurrentLightboxIndexWrapper(card.id)
                     setIsLightboxOpen(true)
                   }}
                 >
@@ -92,11 +110,12 @@ export default function PlayRecapPage({
           <div className='absolute inset-0 bg-black bg-opacity-90 flex items-center justify-center'>
             <div
               className='relative h-screen w-screen'
-              onClick={() => setIsLightboxOpen(false)}
+              onClick={() => setCurrentLightboxIndexWrapper(null)}
             >
               <Image
+                style={{ opacity: imageOpacity }}
                 src={cards[currentLightboxIndex].full_src}
-                className='mx-auto max-h-screen max-w-screen w-auto h-auto z-10 relative'
+                className='mx-auto max-h-screen max-w-screen w-auto h-auto z-10 relative transition-all duration-500 ease-in-out'
                 alt={cards[currentLightboxIndex].alt}
                 objectFit='contain'
                 placeholder='blur'
@@ -122,7 +141,7 @@ export default function PlayRecapPage({
             <div
               className='absolute top-0 right-0 h-full w-20 flex items-center justify-center cursor-pointer'
               onClick={() =>
-                setCurrentLightboxIndex(
+                setCurrentLightboxIndexWrapper(
                   (currentLightboxIndex + 1) % cards.length
                 )
               }
@@ -196,6 +215,6 @@ export default function PlayRecapPage({
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 }

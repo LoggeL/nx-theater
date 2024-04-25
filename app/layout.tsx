@@ -1,7 +1,6 @@
 'use client'
 
-import type { Metadata } from 'next'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
@@ -23,6 +22,23 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   const [active, setActive] = useState<string | null>(null)
+  const [lastScrollTop, setLastScrollTop] = useState(0)
+  const [isScrollingUp, setIsScrollingUp] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop
+      if (st > lastScrollTop) {
+        setIsScrollingUp(false)
+      } else {
+        setIsScrollingUp(true)
+      }
+      setLastScrollTop(st <= 0 ? 0 : st)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollTop])
 
   return (
     <html lang='en' className='h-full w-full'>
@@ -30,7 +46,10 @@ export default function RootLayout({
         className={`${inter.className} w-full h-full bg-black/[0.95] antialiased`}
       >
         <div className='flex flex-col md:items-center md:justify-center h-full'>
-          <div className='fixed top-10 inset-x-0 max-w-2xl mx-auto z-50'>
+          <div
+            className='fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 transition-opacity duration-500'
+            style={{ opacity: isScrollingUp ? 1 : 0 }}
+          >
             <Menu setActive={setActive}>
               <MenuItem
                 setActive={setActive}

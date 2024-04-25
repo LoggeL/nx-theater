@@ -1,5 +1,6 @@
 [
     {
+        "id": "sagenhaft",
         "title": "Sagenhaft",
         "year": 2024,
         "img": "/img/banners/sagenhaft.jpg",
@@ -8,6 +9,7 @@
         "blurHash": "L5BV3a-C0JIw0@%1M]XUvvVr~EX8"
     },
     {
+        "id": "freiheit",
         "title": "Traum von Freiheit",
         "year": 2023,
         "img": "/img/banners/freiheit.jpg",
@@ -16,6 +18,7 @@
         "blurHash": "L9CF@jXT0fMxyr%L9GIV.m-V9FE2"
     },
     {
+        "id": "goldfieber",
         "title": "Goldfieber",
         "year": 2022,
         "img": "/img/banners/goldfieber.jpg",
@@ -24,7 +27,8 @@
         "blurHash": "L4EC2X0100Ir~4jZ0mNH4T-o.9E2"
     },
     {
-        "title": "Maleficarum",
+        "id": "maleficarum",
+        "title": "Malleus Maleficarum",
         "year": 2021,
         "img": "/img/banners/maleficarum.jpg",
         "description": "Ein düsteres Stück über Hexerei und dunkle Magie.",
@@ -32,7 +36,8 @@
         "blurHash": "L3Kc2a,;03E8{eRUl7S^01ENb@=^"
     },
     {
-        "title": "Kristall",
+        "id": "kristall",
+        "title": "Kristall der Träume",
         "year": 2020,
         "img": "/img/banners/kristall.jpg",
         "description": "Eine magische Geschichte über die Macht eines mystischen Kristalls.",
@@ -40,6 +45,7 @@
         "blurHash": "L6Dl$u03XW~X00xVRMjWF*-;ohR*"
     },
     {
+        "id": "dystopia",
         "title": "Dystopia",
         "year": 2019,
         "img": "/img/banners/dystopia.jpg",
@@ -48,6 +54,7 @@
         "blurHash": "LGI3pi?E^Nf7HToL%J$$.PNbAGEh"
     },
     {
+        "id": "bluttribut",
         "title": "Bluttribut",
         "year": 2018,
         "img": "/img/banners/bluttribut.jpg",
@@ -56,7 +63,8 @@
         "blurHash": "L59$kG#S~CIo].$jRjs:00Xm9Zxu"
     },
     {
-        "title": "Kloster",
+        "id": "kloster",
+        "title": "Verrat im Kloster",
         "year": 2017,
         "img": "/img/banners/kloster.jpg",
         "description": "Ein geheimnisvolles Drama, das in einem abgelegenen Kloster spielt.",
@@ -64,6 +72,7 @@
         "blurHash": "L7HA@KE100-pQ*~X%ir:?w00xA-;"
     },
     {
+        "id": "proben",
         "title": "Proben",
         "img": "/img/banners/proben.jpg",
         "description": "Ein Einblick in die harte Arbeit und das Engagement hinter den Kulissen.",
