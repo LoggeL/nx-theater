@@ -93,6 +93,38 @@ export default function RootLayout({
           </div>
           {children}
         </div>
+
+        {/* Scrolll to top FAB */}
+        <a
+          href='#'
+          className={cn(
+            'fixed bottom-10 right-10 p-4 rounded-full shadow-md border border-black bg-orange-500 text-white',
+            'transition-transform duration-500',
+            'hover:scale-110',
+            isScrollingUp
+              ? 'transform translate-y-28'
+              : 'transform translate-y-0'
+          )}
+          onClick={(e) => {
+            e.preventDefault()
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            className='h-6 w-6 text-black'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M5 10l7-7m0 0l7 7m-7-7v18'
+            />
+          </svg>
+        </a>
       </body>
     </html>
   )
