@@ -2,6 +2,7 @@
 import React from 'react'
 import { ContainerScroll } from '@/components/ui/container-scroll-animation'
 import { TracingBeam } from '@/components/ui/tracing-beam'
+import { blurHashToDataURL } from '@/lib/blurhashDataURL'
 
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
@@ -17,8 +18,10 @@ export default function HeroScrollDemo() {
         image={
           <Image
             src='/img/other_images/Group.webp'
-            height='660'
-            width='1200'
+            blurDataURL={blurHashToDataURL('LeGI=i%MWAxu_4ofWWofx]ayWBWV')}
+            placeholder='blur'
+            height='1320'
+            width='1800'
             alt='Hero'
           />
         }
