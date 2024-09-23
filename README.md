@@ -1,3 +1,9 @@
+# ⚠️ Abandoned Project ⚠️
+
+This project is no longer maintained and is kept here for archival purposes. Feel free to finish it if you want.
+
+# ---------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
